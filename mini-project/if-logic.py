@@ -4,7 +4,7 @@ class Question:
         self.prompt = prompt
         self.answer = answer
         
-
+#question prompts with answer choices for quiz
 questions_prompt = [
             "What is the largest organ in the body? \n(a) heart \n(b) stomach \n(c) intestines \n(d) skin\n->",
             "Where are the smallest muscles in the body found? \n(a) eyes \n(b) ears \n(c) toes \n(d) nose\n-> ",
@@ -12,7 +12,7 @@ questions_prompt = [
             "What does the orbital cavity contain? \n(a) eyes \n(b) teeth \n(c) intestine \n(d) stomach\n->",
             "Which is the longer of the two bones in the forearm? \n(a) ulna \n(b) humerous \n(c) radius \n(d) femur\n->"
             ]
-
+#questions with correct answer
 questions = [
           Question(questions_prompt[0], "d"),
           Question(questions_prompt[1], "b"),
@@ -20,13 +20,14 @@ questions = [
           Question(questions_prompt[3], "a"),
           Question(questions_prompt[4], "a"),
         ];
-
+#output to users, game intro
 user_name = input("Welcome to the Quiz-Me-Experience!  Please enter a username.\n-->").title()
 print(f"{user_name}, it's now time to pick a 'Quiz-Me' Category.")
 
 topic_choice = input("\nYour quiz will have 5 questions on human anatomy. Press any key to continue.\n-->")
 
-def run_quiz(questions):
+#logic for the quiz 
+def main(questions):
     user_score = 0
     play_again = True
 
@@ -43,4 +44,6 @@ def run_quiz(questions):
                 print(f"Sorry, the correct answer was {question.answer}")
                 break
         print(f"{user_name} your final score was {user_score}")
-run_quiz(questions)
+
+if __name__ = "__main__":
+    main(questions)
