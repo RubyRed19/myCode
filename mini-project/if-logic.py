@@ -42,4 +42,5 @@ def run_quiz(questions):
             elif answer != question.answer:
                 print(f"Sorry, the correct answer was {question.answer}")
                 break
+        print(f"{user_name} your final score was {user_score}")
 run_quiz(questions)
