@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meme Generator</title>
+</head>
+<body>
+    <h1>Welcome to the MEME MACHINE</h1>
+    <h3>Where you can search and view memes for your entertainment!</h3>
+    <h4>Search for memes by these categories:</h4>
+    <ul>
+         {% for item in cat %}
+         <li>{{item}} </li>
+         {% endfor %}
+    </ul>
+     
+    <form action = "/action" method = "POST">
+            <p><input type = "text" placeholder = "Type category here" name = "nm"></p>
+            <p><input type = "submit" value = "Search"></p>
+        </form> 
+    <p><img src="{{meme_pic}}"></p>
+    <p>Current subreddit: {{subreddit}} </p> 
+</body>
+</html>
+
